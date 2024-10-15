@@ -164,7 +164,6 @@ svg {
 }
 
 nav{
-    padding: 30px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -194,19 +193,43 @@ nav{
     .navMenu{
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         background-color: hsla(0, 0%, 10%, .3);
         width: 75%;
         height: 100%;
         padding: 4.5rem 0 0 3rem;
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
+        transition: right 0.8s;
     }
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.navLink {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color .4s;
+}
+.navLink:hover{
+  color: var(--first-color);
+}
+
+.navClose{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
 }
 
 
 /* Show menu */
-
+.show-menu{
+  right: 0;
+}
 
 /* Add blur to header */
 
@@ -215,7 +238,38 @@ nav{
 
 
 /*=============== HOME ===============*/
+.home{
+  background-color: var(--container-color);
+}
 
+.homeContainer{
+  padding: 2rem;
+  row-gap: 2.5rem;
+}
+
+.homeContent {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.homeData{
+  text-align: center;
+}
+
+.homeSub,
+.homeEducation{
+  font-size: var(--bigger-font-size);
+}
+
+.homeSub span,
+.homeTitle{
+  color: var(--first-color);
+}
+
+.homeTitle{
+  font-size: var(--bigger-font-size);
+  font-weight: var(--font-semi-bold);
+}
 
 /*=============== BUTTON ===============*/
 
