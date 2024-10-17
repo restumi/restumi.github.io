@@ -232,7 +232,22 @@ nav{
 }
 
 /* Add blur to header */
+.blur-header {
+  background-color: transparent;
+}
 
+.blur-header::after{
+  content: "";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 13%, .3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 /* Active link */
 
@@ -349,7 +364,48 @@ nav{
 }
 
 /*=============== SKILLS ===============*/
+.skills{
+  background-color: var(--container-color);
+}
 
+.skillsContainer{
+  padding-bottom: 2rem;
+  row-gap: 3.5rem;
+}
+
+.skillsDeskripsi {
+  margin-bottom: 2rem;
+}
+
+.skillsData{
+  text-align: center;
+}
+
+.skillsContent,
+.skillsGroup{
+  display: grid;
+}
+
+.skillsContent {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.skillsGroup {
+  row-gap: 1rem;
+  list-style: decimal-leading-zero;
+}
+
+.skillsItem{
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.skillsItem::marker{
+  color: var(--first-color);
+}
 
 /*=============== SERVICES ===============*/
 
