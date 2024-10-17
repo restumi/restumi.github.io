@@ -274,6 +274,7 @@ nav{
 .homeSub,
 .homeEducation{
   font-size: var(--bigger-font-size);
+  text-align: center;
 }
 
 .homeSub span,
@@ -284,6 +285,7 @@ nav{
 .homeTitle{
   font-size: var(--bigger-font-size);
   font-weight: var(--font-semi-bold);
+  text-align: center;
 }
 
 .homeDeskripsi {
@@ -408,13 +410,111 @@ nav{
 }
 
 /*=============== SERVICES ===============*/
+.servisContainer{
+  row-gap: 2rem;
+  padding-block: 1rem;
+}
 
+.servisCard{
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 3px solid var(--container-color);
+  transition: border .4s;
+}
+
+.servisCard:hover{
+  border: 3px solid var(--first-color);
+}
+
+.servisIcon{
+  display: block;
+  font-size: 4rem;
+  color: var(--first-color);
+  margin-bottom: .5rem;
+}
+
+.servisTitle{
+  font-size: var(--h2-font-size);
+}
 
 /*=============== PROJECTS ===============*/
+.projects{
+  background-color: var(--container-color);
+}
 
+.projectContainer{
+  row-gap: 2rem;
+  justify-content: center;
+  padding-block: 1rem;
+}
+
+.projectCard{
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.projectImg{
+  width: 100%;
+  height: 100%;
+}
+
+.projectModal{
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,
+              hsla(0, 0%, 0%, 0) 0%,
+              hsla(var(--hue), 70%, 40%, .8) 120%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: bottom .4s;
+}
+
+.projectSub {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  display: block;
+  margin-bottom: .25rem;
+}
+
+.projectTitle{
+  font-size: var(--h2-font-size);
+}
+
+.projectCard:hover .projectModal{
+  bottom: 0;
+}
 
 /*=============== CONTACT ===============*/
+.contactContainer{
+  padding-top: 1rem;
+}
 
+.contactForm,
+.contactGroup{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contactForm{
+  position: relative;
+}
+
+.contactInput{
+  padding: 1rem;
+  border-radius: .7rem;
+  background-color: var(--container-color);
+}
 
 /*=============== FOOTER ===============*/
 

@@ -120,7 +120,7 @@
                            </pattern>
                      
                            <!-- Insert your profile (recommended size: 640 x 940) -->
-                           <image class="home-img" id="imageBlob" width="640" height="925" href="assets/img/edited.jpg"/>
+                           <image class="home-img" alt="profile" id="imageBlob" width="640" height="925" href="assets/img/edited.jpg"/>
                         </defs>
                      </svg>
                 </div>
@@ -179,7 +179,7 @@
                                </pattern>
                          
                                <!-- Insert your profile (recommended size: 640 x 940) -->
-                               <image class="about-img" id="imageBorder" width="640" height="940" href="assets/img/edited.jpg"/>
+                               <image class="about-img" alt="profile" id="imageBorder" width="640" height="940" href="assets/img/edited.jpg"/>
                             </defs>
                          </svg>
                     </div>
@@ -213,7 +213,7 @@
                         <li class="skillsItem">Dart</li>
                         <li class="skillsItem">Flutter</li>
                     </ol>
-                    <ol class="skillsGruop" start="5">
+                    <ol class="skillsGroup" start="5">
                         <li class="skillsItem">Git & Github</li>
                         <li class="skillsItem">Figma</li>
                     </ol>
@@ -223,17 +223,114 @@
 
          <!--==================== SERVICES ====================-->
          <section class="services section" id="services">
-            
+            <h3 class="homeSub">
+                my <span>Services</span>
+            </h3>
+
+            <h2 class="homeTitle">
+                What Can I Do
+            </h2>
+
+            <div class="servisContainer container grid">
+                <article class="servisCard">
+                    <i class="ri-layout-3-line servisIcon"></i>
+
+                    <h2 class="servisTitle">
+                        Web Developer
+                    </h2>
+
+                    <p class="servisDeskripsi">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Excepturi autem, voluptates pariatur totam doloribus vel.
+                    </p>
+                </article>
+
+                <article class="servisCard">
+                    <i class="ri-pantone-line servisIcon"></i>
+
+                    <h2 class="servisTitle">UI/UX Designer</h2>
+
+                    <p class="servisDeskripsi">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Excepturi autem, voluptates pariatur totam doloribus vel.
+                    </p>
+                </article>
+
+                <article class="servisCard">
+                    <i class="ri-pen-nib-line servisIcon"></i>
+
+                    <h2 class="servisTitle">Graphic Design</h2>
+
+                    <p class="servisDeskripsi">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Excepturi autem, voluptates pariatur totam doloribus vel.
+                    </p>
+                </article>
+            </div>
          </section>
 
          <!--==================== PROJECTS ====================-->
          <section class="projects section" id="projects">
-            
+            <h3 class="homeSub">
+                my <span>Projects</span>
+            </h3>
+
+            <h2 class="homeTitle">
+                Recent Projects
+            </h2>
+
+            <div class="projectContainer container grid">
+                <article class="projectCard">
+                    <img src="assets/img/project-img-1.jpg" alt="project image" class="projectImg">
+
+                    <div class="projectModal">
+                        <span class="projectSub">Web</span>
+
+                        <h2 class="projectTitle">Modern Website</h2>
+                    </div>
+                </article>
+                <article class="projectCard">
+                    <img src="assets/img/project-img-1.jpg" alt="project image" class="projectImg">
+
+                    <div class="projectModal">
+                        <span class="projectSub">Web</span>
+
+                        <h2 class="projectTitle">Modern Website</h2>
+                    </div>
+                </article>
+                <article class="projectCard">
+                    <img src="assets/img/project-img-1.jpg" alt="project image" class="projectImg">
+
+                    <div class="projectModal">
+                        <span class="projectSub">Web</span>
+
+                        <h2 class="projectTitle">Modern Website</h2>
+                    </div>
+                </article>
+            </div>
          </section>
 
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
-            
+            <h3 class="homeSub">
+                Get In <span>Touch</span>
+            </h3>
+
+            <h2 class="homeTitle">Contact Me</h2>
+
+            <div class="contactContainer container grid">
+                <form action="" class="contactForm" id="contactForm">
+                    <div class="contactGroup">
+                        <input type="text" class="contactInput" required name="userName" placeholder="Masukan namamu">
+                        <input type="email" class="contactInput" required name="email" placeholder="Masukan emailmu">
+                    </div>
+                    <textarea name="message" class="contactInput" placeholder="Apa yang ingin anda sampaikan?" required></textarea>
+                    <p class="contactMessage" id="contactMessage"></p>
+                    <button type="submit" class="tombol contactButton">
+                        Kirim!
+                    </button>
+                </form>
+            </div>
          </section>
       </main>
 
