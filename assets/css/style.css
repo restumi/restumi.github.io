@@ -514,6 +514,33 @@ nav{
   padding: 1rem;
   border-radius: .7rem;
   background-color: var(--container-color);
+  color: var(--title-color);
+}
+
+.contactInput::placeholder{
+  color: var(--text-color);
+}
+
+.contactForm textarea{
+  height: 11rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+
+.contactButton {
+  border-radius: 20px;
+  padding: 1.3rem;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.contactMessage{
+  position: absolute;
+  left: 0;
+  bottom: 4.5rem;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  
 }
 
 /*=============== FOOTER ===============*/
