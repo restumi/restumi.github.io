@@ -37,7 +37,22 @@ const blurHeader = () =>{
 window.addEventListener('scroll', blurHeader)
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contactForm'),
+      contactMessage = document.getElementById('contactMessage')
 
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    // serviceID - templateID -#form - publicKey
+    emailjs.sendForm('service_hj8n2w9', 'template_kn9dci6', '#contactForm', 'LAUwd0vWdorzQS6-V' )
+        .then(() => {
+            contactMessage.textContent = 'Pesan Terkirim✅'
+        },() => {
+            contactMessage.textContent = 'Pesan gagal terkirim (ada kesalahan) ❌'
+        })
+}
+
+contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
