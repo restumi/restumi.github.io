@@ -44,8 +44,9 @@ const sendEmail = (e) => {
     e.preventDefault()
 
     // serviceID - templateID -#form - publicKey
-    emailjs.sendForm('service_hj8n2w9', 'template_kn9dci6', '#contactForm', 'LAUwd0vWdorzQS6-V' )
+    emailjs.sendForm('service_nrmn0lq', 'template_kn9dci6', '#contactForm', 'LAUwd0vWdorzQS6-V' )
         .then(() => {
+            // show sent message
             contactMessage.textContent = 'Pesan Terkirim✅'
 
             setTimeout(() => {
@@ -54,6 +55,7 @@ const sendEmail = (e) => {
 
             contactForm.reset()
         },() => {
+            // show error message
             contactMessage.textContent = 'Pesan gagal terkirim (ada kesalahan) ❌'
 
             setTimeout(() => {
@@ -105,3 +107,19 @@ const scrollActive = () =>{
 window.addEventListener('scroll', scrollActive)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true  //animation repeat
+})
+
+sr.reveal(`.homeData, .homeSosial, .contactContainer`)
+sr.reveal(`.homeImg, .footerContainer`, {origin: 'bottom'})
+
+sr.reveal(`.aboutData, .skillsData`, {origin: 'left'})
+sr.reveal(`.aboutImg, .skillsContent`, {origin: 'right'})
+
+sr.reveal(`.servisCard, .projectCard`, {interval: 100})

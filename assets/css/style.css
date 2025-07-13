@@ -19,8 +19,8 @@
       -> Copy the color mode (HSL)
   */
 
-  --hue: 162;
-  --first-color: hsl(var(--hue), 100%, 40%);
+  --hue: 14;
+  --first-color: hsl(var(--hue), 100%, 65%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
@@ -281,7 +281,8 @@ nav{
 }
 
 .homeSub span,
-.homeTitle{
+.homeTitle,
+.homeEducation span{
   color: var(--first-color);
 }
 
@@ -625,9 +626,237 @@ nav{
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+  .container{
+    margin-inline: 1rem;
+  }
 
+  .skillsContent{
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+  }
+
+  .servisCard{
+    padding-block: 1.5rem;
+  }
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .homeContainer,
+  .aboutContainer,
+  .skillsContainer,
+  .servisContainer,
+  .projectContainer,
+  .contactContainer
+  {
+    grid-template-columns: 360px;
+    justify-content: center;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .navMenu{
+    width: 55%;
+  }
+
+  .homeContainer,
+  .aboutContainer,
+  .skillsContainer
+  {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .homeData,
+  .aboutData,
+  .skillsData
+  /* :is(.homeData) :is(.homeSub, .homeTitle, .homeEducation), */
+  /* :is(.homeData, .aboutData, .skillsData) :is(.homeSub, .homeTitle) */
+  {
+    text-align: initial;
+  }
+
+  .homeData .homeSub,
+  .homeData .homeTitle,
+  .homeData .homeEducation,
+  .aboutData .homeSub,
+  .aboutData .homeTitle,
+  .skillsData .homeSub,
+  .skillsData .homeTitle
+  {
+    text-align: initial;
+  }
+  
+
+  .homeSosial{
+    justify-content: initial;
+  }
+
+  .homeBlob,
+  .aboutBlob{
+    width: 400px;
+  }
+
+  .aboutData{
+    order: 1;
+  }
+
+  .servisContainer,
+  .projectContainer
+  {
+    grid-template-columns: repeat(2, 352px);
+  }
+}
 
 /* For large devices */
+@media screen and (min-width: 1023px) {
+  .section{
+    padding-block: 7rem 2rem;
+  }
+
+  .section__subtitle{
+    font-size: var(--normal-font-size);
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .navClose,
+  .navToggle{
+    display: none;
+  }
+
+  .navList{
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+
+  .blur-header::after{
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  }
+}
+
+@media screen and (min-width:1152px){
+  .container{
+    margin-inline: auto;
+  }
+
+  .homeContainer{
+    grid-template-columns: 445px 550px; 
+    column-gap: 7rem;
+    padding-block: 2rem 3rem;
+  }
+
+  .homeBlob,
+  .aboutBlob
+  {
+    width: 550px;
+  }
+
+  .homeContent{
+    row-gap: 4.5rem;
+  }
+
+  .homeDeskripsi{
+    margin-block: 1.5rem 2.5rem;
+  }
+
+  .homeSosial{
+    column-gap: 1.5rem;
+  }
+
+  .aboutContainer{
+    grid-template-columns: 550px 460px;
+    column-gap: 4.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .aboutDeskripsi{
+    margin-bottom: 3rem;
+  }
+
+  .skillsContainer{
+    grid-template-columns: 340px 425px;
+    column-gap: 10rem;
+    padding-bottom: 4rem;
+  }
+
+  .skillsDeskripsi{
+    margin-bottom: 3rem;
+  }
+
+  .skillsContent{
+    column-gap: 8rem;
+  }
+
+  .skillsGroup{
+    row-gap: 1.5rem;
+  }
+
+  .skillsItem{
+    font-size: var(--h3-font-size);
+  }
+
+  .servisContainer{
+    grid-template-columns: repeat(3, 352px);
+    padding-block: 2.5rem 4rem;
+  }
+
+  .servisCard{
+    padding: 3.5rem 2rem;
+  }
+
+  .projectContainer{
+    grid-template-columns: repeat(3, 350px);
+    row-gap: 3rem;
+    padding-block: 2.5rem 4rem;
+  }
+
+  .contactContainer{
+    grid-template-columns: 680px;
+    padding-block: 2.5rem 2rem ;
+  }
+
+  .contactGroup{
+    grid-template-columns: repeat(2 ,1fr);
+    column-gap: 1.5rem;
+  }
+
+  .contactInput{
+    padding: 1.5rem;
+  }
+
+  .contactForm textarea{
+    height: 20rem;
+  }
+
+  .footer{
+    padding-block: 4.5rem 4rem;
+  }
+
+  .footerContainer{
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: initial;
+  }
+
+  .footerTitle{
+    font-size: var(--bigger-font-size);
+  }
+
+  .footerSosial{
+    column-gap: 1.5rem;
+  }
+
+  .footerCopy{
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  .scrollUp{
+    right: 3rem;
+  }
+}
